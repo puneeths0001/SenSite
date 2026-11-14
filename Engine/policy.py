@@ -1,4 +1,4 @@
-"""Python mirror of contracts/AgentPolicy.sol.
+"""Python mirror of AgentPolicy.sol.
 
 The rules live outside the AI, so even a fully fooled agent cannot break them.
 """

@@ -10,8 +10,12 @@ import random
 import pandas as pd
 import streamlit as st
 
-from engine import agent, attacks, detectors, injection, ledger
-from engine.policy import Policy
+import agent
+import attacks
+import detectors
+import injection
+import ledger
+from policy import Policy
 
 st.set_page_config(page_title="Sensite", page_icon="🛡️", layout="wide")
 

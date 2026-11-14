@@ -1,6 +1,6 @@
 """Red-team agent: a library of attacks plus a random attack generator."""
 import random
-from .detectors import verhoeff_check_digit
+from detectors import verhoeff_check_digit
 
 GOOD = "0x1111111111111111111111111111111111111111"
 ATTACKER = "0xbad0bad0bad0bad0bad0bad0bad0bad0bad0bad0"

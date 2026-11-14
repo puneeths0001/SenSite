@@ -7,11 +7,11 @@ Sensite assumes the AI **will** be fooled and adds layers around it.
 
 | Layer | What it does | File |
 |---|---|---|
-| Red-team agent | Attacks with injections, hidden text, fake invoices, random mutations | `engine/attacks.py` |
-| Document scanner | Finds Aadhaar (Verhoeff check), PAN, cards (Luhn), IFSC, UPI, phone, email, salary, API keys, private keys | `engine/detectors.py` |
-| Guardian | Detects prompt injection, hidden text, secret-extraction attempts | `engine/injection.py` |
-| Policy contract | Allowlist, per-payment limit, daily limit, cooldown. Enforced outside the AI | `engine/policy.py`, `contracts/AgentPolicy.sol` |
-| Audit ledger | Hash-chained log plus a trust score | `engine/ledger.py` |
+| Red-team agent | Attacks with injections, hidden text, fake invoices, random mutations | `attacks.py` |
+| Document scanner | Finds Aadhaar (Verhoeff check), PAN, cards (Luhn), IFSC, UPI, phone, email, salary, API keys, private keys | `detectors.py` |
+| Guardian | Detects prompt injection, hidden text, secret-extraction attempts | `injection.py` |
+| Policy contract | Allowlist, per-payment limit, daily limit, cooldown. Enforced outside the AI | `policy.py`, `AgentPolicy.sol` |
+| Audit ledger | Hash-chained log plus a trust score | `ledger.py` |
 
 ## Run locally
 ```
@@ -34,7 +34,7 @@ streamlit run app.py
 
 ## Honest limits
 - The payment agent is a **simulated gullible agent** (rule based), not a real LLM. No API key or real money is involved.
-- The ledger is a hash chain inside the app. `contracts/AgentPolicy.sol` is an optional testnet extension and has not been deployed or audited.
+- The ledger is a hash chain inside the app. `AgentPolicy.sol` is an optional testnet extension and has not been deployed or audited.
 - Detection is rule based, so unusual formats can be missed.
 
 ## Ideas to extend (if you have time)
