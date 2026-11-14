@@ -2,7 +2,7 @@
 pragma solidity ^0.8.20;
 
 /// Spending rules that live OUTSIDE the AI. Even a fully fooled agent cannot break them.
-/// Optional extension: deploy on a testnet (e.g. Sepolia) with Remix. engine/policy.py mirrors this logic.
+/// Optional extension: deploy on a testnet (e.g. Sepolia) with Remix. policy.py mirrors this logic.
 contract AgentPolicy {
     address public owner;
     address public agent;
